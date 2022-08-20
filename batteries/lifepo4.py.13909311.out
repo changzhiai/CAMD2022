@@ -1,0 +1,544 @@
+venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  22.1.1b1
+ |___|_|             
+
+User:   dft22x019@n-62-28-29
+Date:   Tue Aug 16 14:17:58 2022
+Arch:   x86_64
+Pid:    11640
+CWD:    /zhome/fa/5/1000203270/CAMD2022/batteries
+Python: 3.8.5
+gpaw:   /zhome/fa/5/1000203270/CAMD2022/venv/gpaw/gpaw (4191706c58)
+_gpaw:  /zhome/fa/5/1000203270/CAMD2022/venv/gpaw/
+        _gpaw.cpython-38-x86_64-linux-gnu.so (88bf7688a8)
+ase:    /zhome/fa/5/1000203270/CAMD2022/venv/ase/ase (version 3.23.0b1-bcce2b6c57)
+numpy:  /zhome/fa/5/1000203270/CAMD2022/venv/lib/python3.8/site-packages/numpy (version 1.22.4)
+scipy:  /zhome/fa/5/1000203270/CAMD2022/venv/lib/python3.8/site-packages/scipy (version 1.8.1)
+libxc:  4.3.4
+units:  Angstrom and eV
+cores: 8
+OpenMP: False
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  convergence: {density: 0.001,
+                eigenstates: 0.0001,
+                energy: 0.0002}
+  kpts: {gamma: True,
+         size: (2, 4, 5)}
+  mixer: {backend: pulay,
+          beta: 0.1,
+          method: separate,
+          nmaxold: 5,
+          weight: 100.0}
+  mode: {ecut: 500.0,
+         name: pw}
+  nbands: -40
+  occupations: {fixmagmom: True,
+                name: fermi-dirac,
+                width: 0.1}
+  setups: {Fe: :d,4.3}
+  spinpol: True
+  xc: BEEF-vdW
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Fe:
+    name: Iron
+    id: 37abbd8d6c3c35915a9b583b742da910
+    Z: 26.0
+    valence: 8
+    core: 18
+    charge: 0.0
+    Hubbard: {U: 4.3,  # eV
+              l: 2,
+              scale: True}
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/Fe.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 2.06,
+              core: 2.67}
+    valence states:
+      #              energy  rcut
+      - 4s(2.00)    -5.291   1.164
+      - 4p(0.00)    -1.326   1.058
+      - 3d(6.00)    -7.505   1.058
+      -  s          21.920   1.164
+      -  p          25.885   1.058
+      -  d          19.706   1.058
+  
+    # Using partial waves for Fe as LCAO basis
+
+  O:
+    name: Oxygen
+    id: 32ecd46bf208036f09c70b0ec9a88b78
+    Z: 8.0
+    valence: 6
+    core: 2
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/O.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.21,
+                           lmax: 2}
+    cutoffs: {filter: 1.17,
+              core: 0.83}
+    valence states:
+      #              energy  rcut
+      - 2s(2.00)   -23.961   0.688
+      - 2p(4.00)    -9.029   0.598
+      -  s           3.251   0.688
+      -  p          18.182   0.598
+      -  d           0.000   0.619
+  
+    # Using partial waves for O as LCAO basis
+
+  P:
+    name: Phosphorus
+    id: 03b4a34d18bb161274a4ee27145ba70a
+    Z: 15.0
+    valence: 5
+    core: 10
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/P.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.30,
+                           lmax: 2}
+    cutoffs: {filter: 1.69,
+              core: 1.81}
+    valence states:
+      #              energy  rcut
+      - 3s(2.00)   -13.968   0.953
+      - 3p(3.00)    -5.506   0.953
+      -  s          13.244   0.953
+      -  p          21.705   0.953
+      -  d           0.000   0.953
+  
+    # Using partial waves for P as LCAO basis
+
+  Li:
+    name: Lithium
+    id: 830b4218f175192f93f959cfc0aad614
+    Z: 3.0
+    valence: 1
+    core: 2
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/Li.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 1.91,
+              core: 2.55}
+    valence states:
+      #              energy  rcut
+      - 2s(1.00)    -2.874   1.058
+      - 2p(0.00)    -1.090   1.058
+      -  s          24.337   1.058
+  
+    # Using partial waves for Li as LCAO basis
+
+Reference energy: -209154.261134  # eV
+
+Spin-polarized calculation.
+Magnetic moment: 16.000000
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0002 eV / electron
+ Maximum integral of absolute [dens]ity change: 0.001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 0.0001 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 1
+
+  ( 1  0  0)
+  ( 0  1  0)
+  ( 0  0  1)
+
+40 k-points: 2 x 4 x 5 Monkhorst-Pack grid + [1/4,1/8,0.000000]
+22 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.00000000    0.00000000    0.00000000          1/40
+   1:     0.00000000    0.00000000    0.20000000          2/40
+   2:     0.00000000    0.00000000    0.40000000          2/40
+   3:     0.00000000    0.25000000   -0.40000000          2/40
+   4:     0.00000000    0.25000000   -0.20000000          2/40
+   5:     0.00000000    0.25000000    0.00000000          2/40
+   6:     0.00000000    0.25000000    0.20000000          2/40
+   7:     0.00000000    0.25000000    0.40000000          2/40
+   8:     0.00000000    0.50000000    0.00000000          1/40
+   9:     0.00000000    0.50000000    0.20000000          2/40
+          ...
+  21:     0.50000000    0.50000000    0.40000000          2/40
+
+Wave functions: Plane wave expansion
+  Cutoff energy: 500.000 eV
+  Number of coefficients (min, max): 7609, 7676
+  Pulay-stress correction: 0.000000 eV/Ang^3 (de/decut=0.000000)
+  Using FFTW library
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fixed magnetic moment: 16.000
+Fermi-Dirac:
+  width: 0.1000  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 54*32*25 grid
+  Fine grid: 108*64*50 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.1
+  old densities: 5
+  Damping of long wavelength oscillations: 100 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 108*64*50 grid
+  Using the BEEF-vdW Exchange-Correlation functional
+  External potential:
+    NoExternalPotential
+ 
+
+XC parameters: BEEF-vdW with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 104.78 MiB
+  Calculator: 124.74 MiB
+    Density: 32.39 MiB
+      Arrays: 11.54 MiB
+      Localized functions: 14.27 MiB
+      Mixer: 6.59 MiB
+    Hamiltonian: 8.98 MiB
+      Arrays: 8.57 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 0.41 MiB
+    Wavefunctions: 83.36 MiB
+      Arrays psit_nG: 58.09 MiB
+      Eigensolver: 17.46 MiB
+      Projections: 2.66 MiB
+      Projectors: 3.26 MiB
+      PW-descriptor: 1.88 MiB
+
+Total number of cores used: 8
+Parallelization over k-points: 8
+
+Number of atoms: 28
+Number of atomic orbitals: 132
+Number of bands in calculation: 124
+Number of valence electrons: 152
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+Creating initial wave functions:
+  124 bands from LCAO basis set
+
+     .-------------------------.  
+    /|        O                |  
+   / |         P  O        O   |  
+  /  O   Fe O               P  |  
+ *   |    Fe     O       O     |  
+ |  O|          Li          O  |  
+ |   .-O-------O------Fe-------.  
+ |  P         Li    O  Fe  O  /   
+ | /iO        O  P           /    
+ |/               O         /     
+ Li------------------------*      
+
+Positions:
+   0 Fe     2.936798    1.518185    4.621956    ( 0.0000,  0.0000,  4.0000)
+   1 Fe     2.285183    4.554563    2.248245    ( 0.0000,  0.0000,  4.0000)
+   2 Fe     7.507162    4.554563    0.125464    ( 0.0000,  0.0000,  4.0000)
+   3 Fe     8.158778    1.518185    2.499175    ( 0.0000,  0.0000,  4.0000)
+   4 O      0.968770    1.518185    3.507701    ( 0.0000,  0.0000,  0.0000)
+   5 O      4.253210    4.554563    1.133992    ( 0.0000,  0.0000,  0.0000)
+   6 O      9.475188    4.554563    1.239718    ( 0.0000,  0.0000,  0.0000)
+   7 O      6.190749    1.518185    3.613428    ( 0.0000,  0.0000,  0.0000)
+   8 O      4.759842    1.518186    1.031087    ( 0.0000,  0.0000,  0.0000)
+   9 O      0.462138    4.554563    3.404795    ( 0.0000,  0.0000,  0.0000)
+  10 O      5.684118    4.554563    3.716334    ( 0.0000,  0.0000,  0.0000)
+  11 O      9.981821    1.518186    1.342624    ( 0.0000,  0.0000,  0.0000)
+  12 O      1.716617    0.280653    1.339921    ( 0.0000,  0.0000,  0.0000)
+  13 O      3.505364    5.792094    3.713631    ( 0.0000,  0.0000,  0.0000)
+  14 O      8.727342    3.317031    3.407498    ( 0.0000,  0.0000,  0.0000)
+  15 O      6.938595    2.755717    1.033789    ( 0.0000,  0.0000,  0.0000)
+  16 O      8.727343    5.792095    3.407498    ( 0.0000,  0.0000,  0.0000)
+  17 O      6.938596    0.280654    1.033789    ( 0.0000,  0.0000,  0.0000)
+  18 O      1.716616    2.755718    1.339921    ( 0.0000,  0.0000,  0.0000)
+  19 O      3.505364    3.317031    3.713630    ( 0.0000,  0.0000,  0.0000)
+  20 P      0.965458    1.518187    1.968228    ( 0.0000,  0.0000,  0.0000)
+  21 P      4.256523    4.554564    4.341938    ( 0.0000,  0.0000,  0.0000)
+  22 P      9.478500    4.554564    2.779191    ( 0.0000,  0.0000,  0.0000)
+  23 P      6.187436    1.518187    0.405482    ( 0.0000,  0.0000,  0.0000)
+  24 Li     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+  25 Li     0.000000    3.036377    0.000000    ( 0.0000,  0.0000,  0.0000)
+  26 Li     5.221979    3.036377    2.373709    ( 0.0000,  0.0000,  0.0000)
+  27 Li     5.221979    0.000000    2.373709    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes   10.443958    0.000000    0.000000    54     0.1934
+  2. axis:    yes    0.000000    6.072755    0.000000    32     0.1898
+  3. axis:    yes    0.000000    0.000000    4.747419    25     0.1899
+
+  Lengths:  10.443958   6.072755   4.747419
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1910
+
+     iter     time        total  log10-change:  magmom
+                         energy  eigst   dens
+iter:   1 14:18:53  -770.208389                  +16.0216
+iter:   2 14:19:05  -760.428871  -1.14  -0.80    +16.0194
+iter:   3 14:19:17  -750.940330  -1.10  -0.90    +16.0128
+iter:   4 14:19:29  -753.057353  -2.17  -1.26    +16.0084
+iter:   5 14:19:42  -756.794761  -1.78  -1.44    +15.9992
+iter:   6 14:19:54  -756.515999  -2.47  -1.87    +15.9997
+iter:   7 14:20:06  -756.496074  -2.94  -2.16    +15.9999
+iter:   8 14:20:18  -756.487740c -4.17c -2.53    +15.9998
+iter:   9 14:20:30  -756.491516c -3.64  -2.61    +15.9999
+iter:  10 14:20:43  -756.502580c -4.02c -2.75    +15.9999
+iter:  11 14:20:55  -756.503515c -5.05c -2.86    +15.9999
+iter:  12 14:21:07  -756.515941c -3.56  -2.90    +15.9999
+iter:  13 14:21:19  -756.504307c -4.15c -2.52    +15.9999
+iter:  14 14:21:31  -756.506570c -5.10c -3.05c   +16.0000
+
+Converged after 14 iterations.
+
+Dipole moment: (0.000051, -0.000205, -0.000015) |e|*Ang
+
+Total magnetic moment: (0.000000, 0.000000, 15.999985)
+Local magnetic moments:
+   0 Fe ( 0.000000,  0.000000,  3.768437)
+   1 Fe ( 0.000000,  0.000000,  3.769723)
+   2 Fe ( 0.000000,  0.000000,  3.768437)
+   3 Fe ( 0.000000,  0.000000,  3.769725)
+   4 O  ( 0.000000,  0.000000,  0.013235)
+   5 O  ( 0.000000,  0.000000,  0.013354)
+   6 O  ( 0.000000,  0.000000,  0.013236)
+   7 O  ( 0.000000,  0.000000,  0.013354)
+   8 O  ( 0.000000,  0.000000,  0.019139)
+   9 O  ( 0.000000,  0.000000,  0.019135)
+  10 O  ( 0.000000,  0.000000,  0.019138)
+  11 O  ( 0.000000,  0.000000,  0.019135)
+  12 O  ( 0.000000,  0.000000,  0.034613)
+  13 O  ( 0.000000,  0.000000,  0.034583)
+  14 O  ( 0.000000,  0.000000,  0.034613)
+  15 O  ( 0.000000,  0.000000,  0.034583)
+  16 O  ( 0.000000,  0.000000,  0.034613)
+  17 O  ( 0.000000,  0.000000,  0.034583)
+  18 O  ( 0.000000,  0.000000,  0.034613)
+  19 O  ( 0.000000,  0.000000,  0.034583)
+  20 P  ( 0.000000,  0.000000,  0.009234)
+  21 P  ( 0.000000,  0.000000,  0.009267)
+  22 P  ( 0.000000,  0.000000,  0.009234)
+  23 P  ( 0.000000,  0.000000,  0.009267)
+  24 Li ( 0.000000,  0.000000,  0.000423)
+  25 Li ( 0.000000,  0.000000,  0.000423)
+  26 Li ( 0.000000,  0.000000,  0.000421)
+  27 Li ( 0.000000,  0.000000,  0.000421)
+
+Energy contributions relative to reference atoms: (reference = -209154.261134)
+
+Kinetic:       +386.279365
+Potential:     -329.750429
+External:        +0.000000
+XC:            -812.436550
+Entropy (-ST):   -0.000000
+Local:           -0.598955
+--------------------------
+Free energy:   -756.506570
+Extrapolated:  -756.506570
+
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+E_Pot= -756.506569676925
+Spin contamination: 0.035525 electrons
+Showing only first 2 kpts
+                      Up                     Down
+ Kpt  Band  Eigenvalues  Occupancy  Eigenvalues  Occupancy
+  0    74      2.00835    1.00000      8.64708    0.00000
+  0    75      2.20479    1.00000      8.68097    0.00000
+  0    76      2.49215    1.00000      8.75451    0.00000
+  0    77      2.69511    1.00000      8.93553    0.00000
+
+  1    74      2.18137    1.00000      8.61969    0.00000
+  1    75      2.28277    1.00000      8.66820    0.00000
+  1    76      2.52490    1.00000      8.95475    0.00000
+  1    77      2.54407    1.00000      8.96423    0.00000
+
+
+Fermi levels: 5.73652, 6.01614
+
+E_Pot= -756.506569676925
+beefvdw ensemble started
+beefvdw ensemble finished
+Timing:                              incl.     excl.
+-----------------------------------------------------------
+Hamiltonian:                         6.377     0.002   0.0% |
+ Atomic:                             0.601     0.008   0.0% |
+  XC Correction:                     0.594     0.594   0.2% |
+ Calculate atomic Hamiltonians:      0.241     0.241   0.1% |
+ Communicate:                        0.000     0.000   0.0% |
+ Initialize Hamiltonian:             0.000     0.000   0.0% |
+ Poisson:                            0.003     0.003   0.0% |
+ XC 3D grid:                         5.530     1.228   0.5% |
+  VdW-DF integral:                   4.302     0.015   0.0% |
+   Convolution:                      0.055     0.055   0.0% |
+   FFT:                              0.023     0.023   0.0% |
+   gather:                           0.319     0.319   0.1% |
+   hmm1:                             0.016     0.016   0.0% |
+   hmm2:                             0.033     0.033   0.0% |
+   iFFT:                             0.031     0.031   0.0% |
+   potential:                        0.151     0.004   0.0% |
+    collect:                         0.000     0.000   0.0% |
+    p1:                              0.077     0.077   0.0% |
+    p2:                              0.063     0.063   0.0% |
+    sum:                             0.006     0.006   0.0% |
+   splines:                          3.660     3.660   1.5% ||
+LCAO initialization:                24.210     0.342   0.1% |
+ LCAO eigensolver:                   8.633     0.001   0.0% |
+  Calculate projections:             0.012     0.012   0.0% |
+  DenseAtomicCorrection:             0.010     0.010   0.0% |
+  Distribute overlap matrix:         0.001     0.001   0.0% |
+  Orbital Layouts:                   0.031     0.031   0.0% |
+  Potential matrix:                  8.556     8.556   3.5% ||
+  Sum over cells:                    0.022     0.022   0.0% |
+ LCAO to grid:                      13.659    13.659   5.6% |-|
+ Set positions (LCAO WFS):           1.577     0.321   0.1% |
+  Basic WFS set positions:           0.001     0.001   0.0% |
+  Basis functions set positions:     0.000     0.000   0.0% |
+  P tci:                             0.631     0.631   0.3% |
+  ST tci:                            0.538     0.538   0.2% |
+  mktci:                             0.086     0.086   0.0% |
+PWDescriptor:                        0.200     0.200   0.1% |
+SCF-cycle:                         179.643    52.335  21.5% |--------|
+ Davidson:                          86.082    23.689   9.7% |---|
+  Apply H:                           7.462     7.084   2.9% ||
+   HMM T:                            0.378     0.378   0.2% |
+  Subspace diag:                    13.918     0.010   0.0% |
+   calc_h_matrix:                   10.099     2.724   1.1% |
+    Apply H:                         7.376     6.975   2.9% ||
+     HMM T:                          0.401     0.401   0.2% |
+   diagonalize:                      0.318     0.318   0.1% |
+   rotate_psi:                       3.490     3.490   1.4% ||
+  calc. matrices:                   30.214    15.567   6.4% |--|
+   Apply H:                         14.647    13.924   5.7% |-|
+    HMM T:                           0.723     0.723   0.3% |
+  diagonalize:                       4.389     4.389   1.8% ||
+  rotate_psi:                        6.409     6.409   2.6% ||
+ Density:                            8.220     0.000   0.0% |
+  Atomic density matrices:           0.153     0.153   0.1% |
+  Mix:                               3.468     3.468   1.4% ||
+  Multipole moments:                 0.009     0.009   0.0% |
+  Pseudo density:                    4.590     4.589   1.9% ||
+   Symmetrize density:               0.001     0.001   0.0% |
+ Hamiltonian:                       32.424     0.027   0.0% |
+  Atomic:                            7.837     0.104   0.0% |
+   XC Correction:                    7.733     7.733   3.2% ||
+  Calculate atomic Hamiltonians:     3.051     3.051   1.3% ||
+  Communicate:                       0.000     0.000   0.0% |
+  Poisson:                           0.034     0.034   0.0% |
+  XC 3D grid:                       21.475    16.144   6.6% |--|
+   VdW-DF integral:                  5.331     0.174   0.1% |
+    Convolution:                     0.725     0.725   0.3% |
+    FFT:                             0.396     0.396   0.2% |
+    gather:                          0.954     0.954   0.4% |
+    hmm1:                            0.218     0.218   0.1% |
+    hmm2:                            0.583     0.583   0.2% |
+    iFFT:                            0.374     0.374   0.2% |
+    potential:                       1.907     0.052   0.0% |
+     collect:                        0.000     0.000   0.0% |
+     p1:                             0.994     0.994   0.4% |
+     p2:                             0.771     0.771   0.3% |
+     sum:                            0.091     0.091   0.0% |
+    splines:                         0.000     0.000   0.0% |
+ Orthonormalize:                     0.581     0.001   0.0% |
+  calc_s_matrix:                     0.098     0.098   0.0% |
+  inverse-cholesky:                  0.006     0.006   0.0% |
+  projections:                       0.355     0.355   0.1% |
+  rotate_psi_s:                      0.120     0.120   0.0% |
+Set symmetry:                        0.002     0.002   0.0% |
+Other:                              32.805    32.805  13.5% |----|
+-----------------------------------------------------------
+Total:                                       243.237 100.0%
+
+Memory usage: 551.85 MiB
+Date: Tue Aug 16 14:22:01 2022
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 13909311: <lifepo4.py> in cluster <dcc> Done
+
+Job <lifepo4.py> was submitted from host <n-62-30-7> by user <dft22x019> in cluster <dcc> at Tue Aug 16 14:17:52 2022
+Job was executed on host(s) <8*n-62-28-29>, in queue <hpc>, as user <dft22x019> in cluster <dcc> at Tue Aug 16 14:17:52 2022
+</zhome/fa/5/1000203270> was used as the home directory.
+</zhome/fa/5/1000203270/CAMD2022/batteries> was used as the working directory.
+Started at Tue Aug 16 14:17:52 2022
+Terminated at Tue Aug 16 14:22:01 2022
+Results reported at Tue Aug 16 14:22:01 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+id=$LSB_JOBID
+mq=/zhome/fa/5/1000203270/CAMD2022/.myqueue/lsf-$id
+source /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+echo "venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate"
+(touch $mq-0 && \
+ cd '/zhome/fa/5/1000203270/CAMD2022/batteries' && \
+ mpiexec python3 lifepo4.py && \
+ touch $mq-1) || \
+(touch $mq-2; exit 1)
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1957.69 sec.
+    Max Memory :                                 3722 MB
+    Average Memory :                             3404.50 MB
+    Total Requested Memory :                     49152.00 MB
+    Delta Memory :                               45430.00 MB
+    Max Swap :                                   -
+    Max Processes :                              13
+    Max Threads :                                41
+    Run time :                                   270 sec.
+    Turnaround time :                            249 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/fa/5/1000203270/CAMD2022/batteries/lifepo4.py.13909311.err> for stderr output of this job.
+

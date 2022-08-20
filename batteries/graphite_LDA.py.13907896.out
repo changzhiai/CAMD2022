@@ -1,0 +1,91 @@
+venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+      Step     Time          Energy          fmax
+BFGS:    0 17:04:17      -40.464493         0.227825
+BFGS:    1 17:04:24      -40.465268         0.689418
+BFGS:    2 17:04:30      -40.464996         0.007481
+      Step     Time          Energy          fmax
+BFGS:    0 17:04:36      -36.739603         3.497899
+BFGS:    1 17:04:42      -36.629053         9.174192
+BFGS:    2 17:04:48      -36.784654         0.913212
+BFGS:    3 17:04:54      -36.796154         0.670434
+BFGS:    4 17:05:01      -36.831297         0.728485
+BFGS:    5 17:05:07      -36.845352         0.278980
+BFGS:    6 17:05:13      -36.851447         0.029693
+BFGS:    7 17:05:20      -36.853364         0.033391
+BFGS:    8 17:05:27      -36.853912         0.011405
+BFGS:    9 17:05:34      -36.853890         0.002490
+[1660575934.313717] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575934.313756] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+      Step     Time          Energy          fmax
+BFGS:    0 17:05:41      -37.184518         0.512279
+[1660575941.299817] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575941.299838] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    1 17:05:48      -37.185898         0.555422
+[1660575948.290811] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575948.290831] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    2 17:05:54      -37.123542         1.196779
+[1660575954.035742] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575954.035764] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    3 17:06:00      -37.194435         0.288011
+[1660575960.364770] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575960.364791] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    4 17:06:07      -37.194665         0.135403
+[1660575967.102511] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575967.102532] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    5 17:06:13      -37.190364         0.036613
+[1660575973.410819] [n-62-28-28:22785:0]          ib_md.c:1063 UCX  WARN  IB: ibv_fork_init() was disabled or failed, yet a fork() has been issued.
+[1660575973.410843] [n-62-28-28:22785:0]          ib_md.c:1064 UCX  WARN  IB: data corruption might occur when using registered memory.
+BFGS:    6 17:06:19      -37.191596         0.003940
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 13907896: <graphite_LDA.py> in cluster <dcc> Done
+
+Job <graphite_LDA.py> was submitted from host <n-62-27-19> by user <dft22x019> in cluster <dcc> at Mon Aug 15 17:04:03 2022
+Job was executed on host(s) <8*n-62-28-28>, in queue <hpc>, as user <dft22x019> in cluster <dcc> at Mon Aug 15 17:04:04 2022
+</zhome/fa/5/1000203270> was used as the home directory.
+</zhome/fa/5/1000203270/CAMD2022/batteries> was used as the working directory.
+Started at Mon Aug 15 17:04:04 2022
+Terminated at Mon Aug 15 17:06:20 2022
+Results reported at Mon Aug 15 17:06:20 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+id=$LSB_JOBID
+mq=/zhome/fa/5/1000203270/CAMD2022/.myqueue/lsf-$id
+source /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+echo "venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate"
+(touch $mq-0 && \
+ cd '/zhome/fa/5/1000203270/CAMD2022/batteries' && \
+ mpiexec python3 graphite_LDA.py && \
+ touch $mq-1) || \
+(touch $mq-2; exit 1)
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1042.98 sec.
+    Max Memory :                                 788 MB
+    Average Memory :                             760.33 MB
+    Total Requested Memory :                     49152.00 MB
+    Delta Memory :                               48364.00 MB
+    Max Swap :                                   -
+    Max Processes :                              13
+    Max Threads :                                41
+    Run time :                                   135 sec.
+    Turnaround time :                            137 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/fa/5/1000203270/CAMD2022/batteries/graphite_LDA.py.13907896.err> for stderr output of this job.
+

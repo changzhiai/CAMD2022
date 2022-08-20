@@ -1,0 +1,75 @@
+venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+      Step     Time          Energy          fmax
+BFGS:    0 11:57:44      -83.153821        13.367113
+BFGS:    1 11:57:59      -77.838833        65.606730
+BFGS:    2 11:58:11      -83.318104         4.854696
+BFGS:    3 11:58:23      -83.324151         1.979301
+BFGS:    4 11:58:35      -83.329820         0.320524
+BFGS:    5 11:58:48      -83.328197         0.192840
+BFGS:    6 11:59:01      -83.326540         0.109214
+BFGS:    7 11:59:14      -83.326067         0.390644
+BFGS:    8 11:59:27      -83.326488         0.005344
+      Step     Time          Energy          fmax
+BFGS:    0 11:59:37      -75.274913        20.605425
+BFGS:    1 11:59:56      -70.642596        61.802348
+BFGS:    2 12:00:10      -75.641726         6.936611
+BFGS:    3 12:00:25      -75.671625         2.881204
+BFGS:    4 12:00:38      -75.684927         0.188526
+BFGS:    5 12:00:54      -75.686985         0.117796
+BFGS:    6 12:01:08      -75.689322         0.366879
+BFGS:    7 12:01:21      -75.690282         0.440194
+BFGS:    8 12:01:35      -75.688668         0.014501
+BFGS:    9 12:01:49      -75.688898         0.003119
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 13908847: <intercalation_e.py> in cluster <dcc> Exited
+
+Job <intercalation_e.py> was submitted from host <n-62-27-17> by user <dft22x019> in cluster <dcc> at Tue Aug 16 11:57:14 2022
+Job was executed on host(s) <8*n-62-28-28>, in queue <hpc>, as user <dft22x019> in cluster <dcc> at Tue Aug 16 11:57:16 2022
+</zhome/fa/5/1000203270> was used as the home directory.
+</zhome/fa/5/1000203270/CAMD2022/batteries> was used as the working directory.
+Started at Tue Aug 16 11:57:16 2022
+Terminated at Tue Aug 16 12:02:01 2022
+Results reported at Tue Aug 16 12:02:01 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+id=$LSB_JOBID
+mq=/zhome/fa/5/1000203270/CAMD2022/.myqueue/lsf-$id
+source /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+echo "venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate"
+(touch $mq-0 && \
+ cd '/zhome/fa/5/1000203270/CAMD2022/batteries' && \
+ mpiexec python3 intercalation_e.py && \
+ touch $mq-1) || \
+(touch $mq-2; exit 1)
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2101.00 sec.
+    Max Memory :                                 1223 MB
+    Average Memory :                             975.40 MB
+    Total Requested Memory :                     49152.00 MB
+    Delta Memory :                               47929.00 MB
+    Max Swap :                                   -
+    Max Processes :                              13
+    Max Threads :                                41
+    Run time :                                   285 sec.
+    Turnaround time :                            287 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/fa/5/1000203270/CAMD2022/batteries/intercalation_e.py.13908847.err> for stderr output of this job.
+

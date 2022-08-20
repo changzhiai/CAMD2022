@@ -1,0 +1,82 @@
+Modules Release 4.8.0 (2021-07-14)
+DCC-SW: Added modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/11.2.0 compiler
+DCC-SW: Released modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Added modules (2020-aug/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/9.3.0 compiler
+DCC-SW: Released modules (2020-aug/XeonE5-2660v3)
+Modules Release 4.8.0 (2021-07-14)
+DCC-SW: Added modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/11.2.0 compiler
+DCC-SW: Released modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Added modules (2020-aug/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/9.3.0 compiler
+DCC-SW: Released modules (2020-aug/XeonE5-2660v3)
+Modules Release 4.3.0 (2019-07-26)
+DCC-SW: Added modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/11.2.0 compiler
+DCC-SW: Released modules (2021-nov/XeonE5-2660v3)
+DCC-SW: Added modules (2020-aug/XeonE5-2660v3)
+DCC-SW: Removed standard modules: /apps/dcc/etc/ModulesSL73/modulefiles
+DCC-SW: Using gnu/9.3.0 compiler
+rank=5 L0: Traceback (most recent call last):
+rank=5 L1:   File "intercalation_e.py", line 24, in <module>
+rank=5 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=5 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 5): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=7 L0: Traceback (most recent call last):
+rank=7 L1:   File "intercalation_e.py", line 24, in <module>
+rank=7 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=7 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 7): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=1 L0: Traceback (most recent call last):
+rank=1 L1:   File "intercalation_e.py", line 24, in <module>
+rank=1 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=1 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 1): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=2 L0: Traceback (most recent call last):
+rank=2 L1:   File "intercalation_e.py", line 24, in <module>
+rank=2 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=2 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 2): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=6 L0: Traceback (most recent call last):
+rank=6 L1:   File "intercalation_e.py", line 24, in <module>
+rank=6 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=6 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 6): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=4 L0: Traceback (most recent call last):
+rank=4 L1:   File "intercalation_e.py", line 24, in <module>
+rank=4 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=4 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 4): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=3 L0: Traceback (most recent call last):
+rank=3 L1:   File "intercalation_e.py", line 24, in <module>
+rank=3 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=3 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 3): <class 'NameError'> occurred.  Calling MPI_Abort!
+rank=0 L0: Traceback (most recent call last):
+rank=0 L1:   File "intercalation_e.py", line 24, in <module>
+rank=0 L2:     calc = DFTD3(dft=dft, xc='PBE')
+rank=0 L3: NameError: name 'DFTD3' is not defined
+GPAW CLEANUP (node 0): <class 'NameError'> occurred.  Calling MPI_Abort!
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 4 in communicator MPI_COMM_WORLD
+with errorcode 42.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] PMIX ERROR: UNREACHABLE in file ../../../../../../../opal/mca/pmix/pmix3x/pmix/src/server/pmix_server.c at line 2193
+[n-62-28-34:28660] 7 more processes have sent help message help-mpi-api.txt / mpi-abort
+[n-62-28-34:28660] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

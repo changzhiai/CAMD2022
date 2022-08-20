@@ -1,0 +1,463 @@
+venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  22.1.1b1
+ |___|_|             
+
+User:   dft22x019@n-62-28-33
+Date:   Fri Aug 19 10:45:50 2022
+Arch:   x86_64
+Pid:    15440
+CWD:    /zhome/fa/5/1000203270/CAMD2022/machinelearning
+Python: 3.8.5
+gpaw:   /zhome/fa/5/1000203270/CAMD2022/venv/gpaw/gpaw (462ec1d400)
+_gpaw:  /zhome/fa/5/1000203270/CAMD2022/venv/gpaw/
+        _gpaw.cpython-38-x86_64-linux-gnu.so (462ec1d400)
+ase:    /zhome/9f/f/2737/CAMD2022/venv-master/ase/ase (version 3.23.0b1-bcce2b6c57)
+numpy:  /zhome/fa/5/1000203270/CAMD2022/venv/lib/python3.8/site-packages/numpy (version 1.22.4)
+scipy:  /zhome/fa/5/1000203270/CAMD2022/venv/lib/python3.8/site-packages/scipy (version 1.8.1)
+libxc:  4.3.4
+units:  Angstrom and eV
+cores: 1
+OpenMP: False
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  kpts: {gamma: True,
+         size: (8, 8, 8)}
+  mode: {ecut: 500.0,
+         name: pw}
+  occupations: {fixmagmom: False,
+                name: fermi-dirac,
+                width: 0.05}
+  xc: GLLBSC
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Pb:
+    name: Lead
+    id: 7128bc37406581dd57b954a14005c0ad
+    Z: 82.0
+    valence: 14
+    core: 68
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/Pb.GLLBSC.gz
+    compensation charges: {type: gauss,
+                           rc: 0.38,
+                           lmax: 2}
+    cutoffs: {filter: 2.36,
+              core: 2.43}
+    valence states:
+      #              energy  rcut
+      - 6s(2.00)   -13.011   1.259
+      - 6p(2.00)    -4.841   1.275
+      - 5d(10.00)   -22.546   1.217
+      -  s          14.200   1.259
+      -  p          22.370   1.275
+      -  d           4.665   1.217
+  
+    # Using partial waves for Pb as LCAO basis
+
+  I:
+    name: Iodine
+    id: 56a2c93caa8f5312f9f1d1cdf7d60453
+    Z: 53.0
+    valence: 7
+    core: 46
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/I.GLLBSC.gz
+    compensation charges: {type: gauss,
+                           rc: 0.37,
+                           lmax: 2}
+    cutoffs: {filter: 2.06,
+              core: 2.96}
+    valence states:
+      #              energy  rcut
+      - 5s(2.00)   -20.049   1.164
+      - 5p(5.00)   -10.166   1.164
+      -  s           7.162   1.164
+      -  p          17.045   1.164
+      -  d           0.000   1.164
+  
+    # Using partial waves for I as LCAO basis
+
+  Cl:
+    name: Chlorine
+    id: 09f58f9f27950b443210bc712db7c002
+    Z: 17.0
+    valence: 7
+    core: 10
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/Cl.GLLBSC.gz
+    compensation charges: {type: gauss,
+                           rc: 0.25,
+                           lmax: 2}
+    cutoffs: {filter: 1.40,
+              core: 1.49}
+    valence states:
+      #              energy  rcut
+      - 3s(2.00)   -24.525   0.794
+      - 3p(5.00)   -12.463   0.794
+      -  s           2.686   0.794
+      -  p          14.748   0.794
+      -  d           0.000   0.794
+  
+    # Using partial waves for Cl as LCAO basis
+
+  Cs:
+    name: Caesium
+    id: 410f156e73873912bcef1522d94a9fbd
+    Z: 55.0
+    valence: 9
+    core: 46
+    charge: 0.0
+    file: /zhome/86/d/1666/PAW/gpaw-setups-0.9.20000/Cs.GLLBSC.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 2.06,
+              core: 2.51}
+    valence states:
+      #              energy  rcut
+      - 5s(2.00)   -26.300   1.164
+      - 6s(1.00)    -2.756   1.164
+      - 5p(6.00)   -13.212   1.058
+      -  p          13.999   1.058
+      -  d           0.000   1.058
+  
+    # Using partial waves for Cs as LCAO basis
+
+Reference energy: -997373.137537  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 2
+
+  ( 1  0  0)  ( 1  0  0)
+  ( 0  1  0)  ( 0  0  1)
+  ( 0  0  1)  ( 0  1  0)
+
+512 k-points: 8 x 8 x 8 Monkhorst-Pack grid + [1/16,1/16,1/16]
+150 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.00000000    0.00000000    0.00000000          1/512
+   1:     0.00000000    0.12500000   -0.12500000          2/512
+   2:     0.00000000    0.12500000    0.00000000          4/512
+   3:     0.00000000    0.12500000    0.12500000          2/512
+   4:     0.00000000    0.25000000   -0.25000000          2/512
+   5:     0.00000000    0.25000000   -0.12500000          4/512
+   6:     0.00000000    0.25000000    0.00000000          4/512
+   7:     0.00000000    0.25000000    0.12500000          4/512
+   8:     0.00000000    0.25000000    0.25000000          2/512
+   9:     0.00000000    0.37500000   -0.37500000          2/512
+          ...
+ 149:     0.50000000    0.50000000    0.50000000          1/512
+
+Wave functions: Plane wave expansion
+  Cutoff energy: 500.000 eV
+  Number of coefficients (min, max): 5436, 5552
+  Pulay-stress correction: 0.000000 eV/Ang^3 (de/decut=0.000000)
+  Using FFTW library
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.0500  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 35*30*30 grid
+  Fine grid: 70*60*60 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 70*60*60 grid
+  Using the GLLBSC Exchange-Correlation functional
+  External potential:
+    NoExternalPotential
+ 
+
+XC parameters: GLLBSC functional being used consists of
+  -----------------------------------------------------------------------
+  | Weight | Module     | Description                                   |
+  -----------------------------------------------------------------------
+  |  1.000 | SCREENING  | GGA_X_PBE_SOL with 2 nearest neighbor stencil |
+  |  1.000 | RESPONSE   | eps=0.0500 eV                                 |
+  |  1.000 | XC         | GGA_C_PBE_SOL with 2 nearest neighbor stencil |
+  -----------------------------------------------------------------------
+
+Memory estimate:
+  Process memory now: 111.57 MiB
+  Calculator: 562.70 MiB
+    Density: 18.89 MiB
+      Arrays: 6.25 MiB
+      Localized functions: 10.24 MiB
+      Mixer: 2.40 MiB
+    Hamiltonian: 4.38 MiB
+      Arrays: 4.09 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 0.29 MiB
+    Wavefunctions: 539.43 MiB
+      Arrays psit_nG: 330.40 MiB
+      Eigensolver: 2.73 MiB
+      Projections: 4.17 MiB
+      Projectors: 188.23 MiB
+      PW-descriptor: 13.91 MiB
+
+Total number of cores used: 1
+
+Number of atoms: 5
+Number of atomic orbitals: 26
+Number of bands in calculation: 26
+Number of valence electrons: 44
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+Creating initial wave functions:
+  26 bands from LCAO basis set
+
+                            
+                            
+                            
+                   Cs       
+                            
+       Cl                   
+                            
+         Cl                 
+        Pb                  
+               I            
+                            
+                            
+                            
+
+Positions:
+   0 Pb     0.237787   -0.016351   -0.016351    ( 0.0000,  0.0000,  0.0000)
+   1 I      3.466165   -0.024028   -0.024028    ( 0.0000,  0.0000,  0.0000)
+   2 Cl    -0.036637    2.851974   -0.010629    ( 0.0000,  0.0000,  0.0000)
+   3 Cl    -0.036637   -0.010629    2.851974    ( 0.0000,  0.0000,  0.0000)
+   4 Cs     4.230941    2.849267    2.849267    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    6.558578   -0.000000   -0.000000    35     0.1874
+  2. axis:    yes    0.000000    5.738104   -0.000000    30     0.1913
+  3. axis:    yes    0.000000    0.000000    5.738104    30     0.1913
+
+  Lengths:   6.558578   5.738104   5.738104
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1900
+
+     iter     time        total  log10-change:
+                         energy  eigst   dens
+iter:   1 10:46:35   -19.663970
+iter:   2 10:47:04   -19.766069  -0.93  -1.26
+iter:   3 10:47:32   -20.084785  -1.82  -1.18
+iter:   4 10:48:00   -20.034495  -2.82  -1.16
+iter:   5 10:48:28   -19.543695  -2.73  -1.15
+iter:   6 10:48:56   -17.746071  -1.20  -1.21
+iter:   7 10:49:24   -18.050658  -2.15  -1.72
+iter:   8 10:49:52   -17.835521  -3.00  -1.66
+iter:   9 10:50:20   -17.727796  -3.16  -1.78
+iter:  10 10:50:48   -17.600867  -2.78  -2.03
+iter:  11 10:51:17   -17.559862  -3.51  -2.17
+iter:  12 10:51:45   -17.607042  -3.71  -2.18
+iter:  13 10:52:13   -17.586812  -3.71  -2.32
+iter:  14 10:52:41   -17.564712  -4.36  -2.65
+iter:  15 10:53:09   -17.559220  -4.77  -2.78
+iter:  16 10:53:37   -17.564187c -5.14  -2.81
+iter:  17 10:54:04   -17.561479c -5.71  -3.22
+iter:  18 10:54:32   -17.561666c -6.16  -3.35
+iter:  19 10:55:00   -17.562528c -5.51  -3.38
+iter:  20 10:55:28   -17.562122c -6.39  -3.64
+iter:  21 10:55:56   -17.562525c -7.16  -3.79
+iter:  22 10:56:24   -17.562133c -7.44c -3.80
+iter:  23 10:56:52   -17.562389c -6.59  -3.75
+iter:  24 10:57:20   -17.562319c -6.99  -4.01c
+iter:  25 10:57:48   -17.562524c -7.48c -4.11c
+
+Converged after 25 iterations.
+
+Dipole moment: (-4.121449, 2.663215, 2.663215) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -997373.137537)
+
+Kinetic:        +90.593961
+Potential:      -86.854672
+External:        +0.000000
+XC:             -21.948995
+Entropy (-ST):   -0.000000
+Local:           +0.647182
+--------------------------
+Free energy:    -17.562524
+Extrapolated:   -17.562524
+
+GLLBSC response reference energy: 0.49680 eV (from HOMO)
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    20     -0.60260    2.00000
+  0    21     -0.60259    2.00000
+  0    22      5.35611    0.00000
+  0    23      6.38625    0.00000
+
+  1    20     -0.66975    2.00000
+  1    21     -0.62745    2.00000
+  1    22      5.62982    0.00000
+  1    23      5.90406    0.00000
+
+
+Fermi level: 1.60769
+
+Gap: 2.434 eV
+Transition (v -> c):
+  (s=0, k=149, n=21, [0.50, 0.50, 0.50]) -> (s=0, k=138, n=22, [0.50, 0.38, -0.38])
+The gap is 3.403 with components: Kohn-Sham gap 2.434 and discontinuity gap of 0.969.
+Timing:                              incl.     excl.
+-----------------------------------------------------------
+Hamiltonian:                         0.777     0.001   0.0% |
+ Atomic:                             0.500     0.001   0.0% |
+  XC Correction:                     0.499     0.499   0.1% |
+ Calculate atomic Hamiltonians:      0.014     0.014   0.0% |
+ Communicate:                        0.000     0.000   0.0% |
+ Initialize Hamiltonian:             0.000     0.000   0.0% |
+ Poisson:                            0.001     0.001   0.0% |
+ XC 3D grid:                         0.260     0.260   0.0% |
+LCAO initialization:                11.467     0.406   0.1% |
+ LCAO eigensolver:                   0.252     0.006   0.0% |
+  Calculate projections:             0.009     0.009   0.0% |
+  DenseAtomicCorrection:             0.026     0.026   0.0% |
+  Distribute overlap matrix:         0.003     0.003   0.0% |
+  Orbital Layouts:                   0.052     0.052   0.0% |
+  Potential matrix:                  0.112     0.112   0.0% |
+  Sum over cells:                    0.043     0.043   0.0% |
+ LCAO to grid:                       9.547     9.547   1.3% ||
+ Set positions (LCAO WFS):           1.262     0.136   0.0% |
+  Basic WFS set positions:           0.000     0.000   0.0% |
+  Basis functions set positions:     0.000     0.000   0.0% |
+  P tci:                             0.783     0.783   0.1% |
+  ST tci:                            0.330     0.330   0.0% |
+  mktci:                             0.012     0.012   0.0% |
+PWDescriptor:                        0.354     0.354   0.0% |
+SCF-cycle:                         695.907     0.422   0.1% |
+ Davidson:                         552.713    93.280  12.9% |----|
+  Apply H:                          87.514    84.579  11.7% |----|
+   HMM T:                            2.935     2.935   0.4% |
+  Subspace diag:                   109.446     0.300   0.0% |
+   calc_h_matrix:                   98.997    12.043   1.7% ||
+    Apply H:                        86.954    83.624  11.5% |----|
+     HMM T:                          3.330     3.330   0.5% |
+   diagonalize:                      1.122     1.122   0.2% |
+   rotate_psi:                       9.027     9.027   1.2% |
+  calc. matrices:                  238.082    65.054   9.0% |---|
+   Apply H:                        173.028   167.824  23.2% |--------|
+    HMM T:                           5.204     5.204   0.7% |
+  diagonalize:                       7.448     7.448   1.0% |
+  rotate_psi:                       16.941    16.941   2.3% ||
+ Density:                           41.452     0.000   0.0% |
+  Atomic density matrices:           0.393     0.393   0.1% |
+  Mix:                               0.608     0.608   0.1% |
+  Multipole moments:                 0.005     0.005   0.0% |
+  Pseudo density:                   40.446    40.352   5.6% |-|
+   Symmetrize density:               0.094     0.094   0.0% |
+ Hamiltonian:                      100.054     0.024   0.0% |
+  Atomic:                           11.904     0.022   0.0% |
+   XC Correction:                   11.882    11.882   1.6% ||
+  Calculate atomic Hamiltonians:     0.351     0.351   0.0% |
+  Communicate:                       0.000     0.000   0.0% |
+  Poisson:                           0.031     0.031   0.0% |
+  XC 3D grid:                       87.744    87.744  12.1% |----|
+ Orthonormalize:                     1.267     0.013   0.0% |
+  calc_s_matrix:                     0.265     0.265   0.0% |
+  inverse-cholesky:                  0.015     0.015   0.0% |
+  projections:                       0.774     0.774   0.1% |
+  rotate_psi_s:                      0.199     0.199   0.0% |
+Set symmetry:                        0.017     0.017   0.0% |
+Other:                              15.702    15.702   2.2% ||
+-----------------------------------------------------------
+Total:                                       724.224 100.0%
+
+Memory usage: 780.84 MiB
+Date: Fri Aug 19 10:57:54 2022
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 13916710: <dft-gllb.py> in cluster <dcc> Done
+
+Job <dft-gllb.py> was submitted from host <n-62-30-7> by user <dft22x019> in cluster <dcc> at Fri Aug 19 10:45:41 2022
+Job was executed on host(s) <8*n-62-28-33>, in queue <hpc>, as user <dft22x019> in cluster <dcc> at Fri Aug 19 10:45:42 2022
+</zhome/fa/5/1000203270> was used as the home directory.
+</zhome/fa/5/1000203270/CAMD2022/machinelearning> was used as the working directory.
+Started at Fri Aug 19 10:45:42 2022
+Terminated at Fri Aug 19 10:57:54 2022
+Results reported at Fri Aug 19 10:57:54 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+id=$LSB_JOBID
+mq=/zhome/fa/5/1000203270/CAMD2022/.myqueue/lsf-$id
+source /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+echo "venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate"
+(touch $mq-0 && \
+ cd '/zhome/fa/5/1000203270/CAMD2022/machinelearning' && \
+ python3 dft-gllb.py && \
+ touch $mq-1) || \
+(touch $mq-2; exit 1)
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   729.77 sec.
+    Max Memory :                                 756 MB
+    Average Memory :                             685.00 MB
+    Total Requested Memory :                     49152.00 MB
+    Delta Memory :                               48396.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                13
+    Run time :                                   732 sec.
+    Turnaround time :                            733 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/fa/5/1000203270/CAMD2022/machinelearning/dft-gllb.py.13916710.err> for stderr output of this job.
+

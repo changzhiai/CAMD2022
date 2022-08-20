@@ -1,0 +1,54 @@
+venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 13909569: <NEB.py> in cluster <dcc> Exited
+
+Job <NEB.py> was submitted from host <n-62-30-7> by user <dft22x019> in cluster <dcc> at Tue Aug 16 15:06:57 2022
+Job was executed on host(s) <8*n-62-30-13>, in queue <hpc>, as user <dft22x019> in cluster <dcc> at Tue Aug 16 15:07:07 2022
+</zhome/fa/5/1000203270> was used as the home directory.
+</zhome/fa/5/1000203270/CAMD2022/batteries> was used as the working directory.
+Started at Tue Aug 16 15:07:07 2022
+Terminated at Tue Aug 16 15:07:14 2022
+Results reported at Tue Aug 16 15:07:14 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash -l
+id=$LSB_JOBID
+mq=/zhome/fa/5/1000203270/CAMD2022/.myqueue/lsf-$id
+source /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate
+echo "venv: /zhome/fa/5/1000203270/CAMD2022/venv/bin/activate"
+(touch $mq-0 && \
+ cd '/zhome/fa/5/1000203270/CAMD2022/batteries' && \
+ mpiexec python3 NEB.py && \
+ touch $mq-1) || \
+(touch $mq-2; exit 1)
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   3.36 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     49152.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   8 sec.
+    Turnaround time :                            17 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/fa/5/1000203270/CAMD2022/batteries/NEB.py.13909569.err> for stderr output of this job.
+
